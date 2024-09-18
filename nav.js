@@ -2,7 +2,7 @@
 const navContainer = document.querySelector('#nav-container');
 
 // Realiza una petición HTTP para cargar el archivo "footer.html"
-fetch('modules_html/nav.html')
+fetch('nav.html')
   .then(response => response.text()) // Obtén el texto de la respuesta
   .then(html => {
     // Inserta el HTML de "nav.html" en el contenedor
