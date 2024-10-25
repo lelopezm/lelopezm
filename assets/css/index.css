@@ -1,18 +1,8 @@
+/* Importaciones para el index */
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #096ed2;
-        }
-        .header-title {
-            background-color: #096ed2;
-            color: rgb(255, 255, 255);
-            padding: 20px 0;
-            text-align: center;
-        }
-        .header-title h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .navbar-bg {
-            background-color: #007bff;
-        }
+@import url(/assets/css/header.css); /* Header del index */
+@import url(/assets/css/content.css);
+@import url(/assets/css/footer.css); /* Footer del index*/
+
+
+/* Primary color: 1A5B9E*/

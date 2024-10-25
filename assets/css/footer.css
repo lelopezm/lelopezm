@@ -1,0 +1,27 @@
+.bg-blue{
+    background-color: rgb(55, 109, 165); 
+
+}
+
+.blue{
+    color: rgb(7, 53, 100); /* Color para la letra azul */
+}
+
+.footer{
+    min-height: 12em;
+}
+
+
+#hola{
+    margin-bottom: 2em;
+}
+
+
+.importante{
+    color: blue;
+
+}
+
+.text-color{
+    color: rgb(194, 151, 6);
+}
