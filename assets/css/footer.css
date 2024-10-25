@@ -1,27 +1,14 @@
-.bg-blue{
-    background-color: rgb(55, 109, 165); 
-
-}
-
-.blue{
-    color: rgb(7, 53, 100); /* Color para la letra azul */
+.background{
+    background-color:#209b78; 
 }
 
 .footer{
     min-height: 12em;
 }
 
-
-#hola{
-    margin-bottom: 2em;
-}
-
-
-.importante{
-    color: blue;
-
-}
-
-.text-color{
-    color: rgb(194, 151, 6);
-}
+.texto-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }

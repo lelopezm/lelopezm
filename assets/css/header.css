@@ -1,19 +1,16 @@
-.bg-blue{
-    background-color: rgb(55, 109, 165); 
+.background{
+    background-color: #209b78;
 
 }
 
-.blue{
-    color: rgb(7, 53, 100); /* Color para la letra azul */
-}
-
-nav{
+.nav{
     height: 100px;
 }
 
 .search-input {
     position: relative;
 }
+
 .search-input input {
     padding-left: 30px; /* Espacio para el icono de lupa */
 }
