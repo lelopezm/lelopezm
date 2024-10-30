@@ -1,0 +1,25 @@
+.titulo_principal {
+    text-align: center; /* Centra el texto */
+    font-weight: bold; /* Pone el texto en negrita */
+    color: red; /* Cambia el color a rojo */
+  }
+
+.titulo_secundario {
+    font-weight: bold; /* Pone el texto en negrita */
+    color: rgb(255, 81, 0); /* Cambia el color a rojo */
+  }
+
+.subtitulo_principal {
+    text-align: center; /* Centra el texto */
+    font-weight: bold; /* Pone el texto en negrita */
+    color: black; /* Cambia el color a rojo */
+  }
+
+.justificado {
+    text-align: justify; /* Justifica el texto */
+  }
+
+.anotacion {
+    text-align: justify; /* Justifica el texto */
+    color: rgb(17, 121, 232); /* Cambia el color a rojo */
+}
