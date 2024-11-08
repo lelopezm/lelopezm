@@ -1,4 +1,6 @@
 .titulo {
+    font-family: Georgia, serif;
+    word-wrap: break-word;
     text-align: center; /* Centra el texto horizontalmente */
     font-weight: bold;  /* Aplica negrita al texto */
     color: red;         /* Cambia el color del texto a rojo */
@@ -19,6 +21,7 @@
   }
   p {
     text-align: justify;
+    margin: 20px; /* Aplica un margen de 20px en todos los lados */
   }
   h1 {
     text-align: center;
@@ -27,13 +30,15 @@
     text-align: left;
     color:black;
     font-weight: bold;
+    margin: 20px; /* Aplica un margen de 20px en todos los lados */
   }
   h3 {
+    margin: 20px; /* Aplica un margen de 20px en todos los lados */
     text-align: left;
-    color:rgb(238, 107, 6);
+    color:rgb(241, 110, 10);
     font-weight: bold;
   }
   hr {
-    border-top: 2px solid black;
-    margin: 10px 0; /* Ajusta el margen según tus necesidades */
+    border-top: 10px solid black;
+    margin: 20px 0; /* Ajusta el margen según tus necesidades */
   }

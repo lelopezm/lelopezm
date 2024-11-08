@@ -39,3 +39,4 @@ cargarContenidoHTML('assets/html/footer.html', 'index-footer');
 // Si desea cargar un documento html en el content del index, solo es que agregue la ruta del html y luego
 // poner el id del link( el id va en <a id= " ">), recordar quitarle al link ( target="_blanck" ) a la etiqueta "a"
 cargarLinkContent('assets/html/asignaturas/fundamentales.html','link_fundamentales')
+cargarLinkContent('assets/html/asignaturas/calculo1.html','link_calculo1')
