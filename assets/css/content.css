@@ -1,3 +1,11 @@
+#index-content{  /*Contenedor principal del content*/
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 .titulo_principal {
     text-align: center; /* Centra el texto */
     font-weight: bold; /* Pone el texto en negrita */
