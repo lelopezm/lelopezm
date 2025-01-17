@@ -1,0 +1,16 @@
+.container {
+    position: relative;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+    background-image: url('img/ucaldas.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* O el color que prefieras para el texto */
+    text-align: center;
+}

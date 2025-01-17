@@ -39,6 +39,29 @@
         color: #ffc107;
         text-decoration: none;
       }
+
+      .fondo {
+        position: relative;
+    height: 60vh;
+    width: 100%;
+    background-image: url('img/ucaldas.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7; /* Ajusta el valor de opacidad según tus preferencias */
+    box-sizing: border-box;
+      }
+
+      .texto {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: black; /* O el color que prefieras para el texto */
+          text-align: center;
+          width: 90%;
+          z-index: 1;
+      }
     </style>
   </head>
 
@@ -47,23 +70,18 @@
     <div id="nav-container"></div>
 
     <!--Texto e imagen-->
-    <div class="container-fluid p-3">
-      <h3 >Bienvenidos</h3>
-      <div class="row">
-        <div class-lg-6">
-        <p style="text-aombre es <strong>Luis Eduardo López-Montenegro</strong>, soy Licenciado en Matemáticas de la Universidad de Nariño (Col), Magíster en Matemática Aplicada y Doctor en Ingeniería – Automática de la Universidad Nacional de Colombia (Manizales). Mi experiencia en docencia inició en el segundo periodo del año 2007. 
-          Desde agosto de 2022 me vinculé al Departamento de Matemáticas de la Universidad de Caldas (Manizales-Colombia) como docente de planta tiempo completo.
+    <div class="fondo">
+      <div class="texto">
+        <h3>Bienvenidos</h3>
+        <p style="text-align: justify;"> <strong>Mi nombre es Luis Eduardo López-Montenegro, soy Licenciado en Matemáticas de la Universidad de Nariño (Col), Magíster en Matemática Aplicada y Doctor en Ingeniería – Automática de la Universidad Nacional de Colombia (Manizales). Mi experiencia en docencia inició en el segundo periodo del año 2007. 
+        Desde agosto de 2022 me vinculé al Departamento de Matemáticas de la Universidad de Caldas (Manizales-Colombia) como docente de planta tiempo completo.</strong>
         </p>
         <p style="text-align: justify;">
-          He construido esta página para compartir resultados de investigación y ayudar al aprendizaje de mis estudiantes con las notas de mis clases, talleres y videos donde están organizados los temas fundamentales de cada asignatura.
+          <strong>He construido esta página para compartir resultados de investigación y ayudar al aprendizaje de mis estudiantes con las notas de mis clases, talleres y videos donde están organizados los temas fundamentales de cada asignatura.</strong>
         </p>
         <p style="text-align: justify;">
-          En esta página encontrarán apuntes de clases, talleres, videos y tablas que ayudan a mejorar el rendimiento académico en el área de matemáticas. En este sitio está publicado el material para los cursos impartidos en la Universidad de Caldas. Si deseas conocer la documentación para otros cursos de matemáticas o estadística, te recomiendo dirigirte al mi sitio en <strong style="color: #0059ff;">wordpress</strong> dando clic <a style="color: #0059ff;" href="https://lelopezm.wordpress.com/" target="_blank">aquí</a>.
-        </p>
-        </div>
-        <div class="col-lg-6 mt-3">
-          <img src="img/ucaldas.svg" width="550" height="400" alt="Logo de la Universidad de Caldas">
-        </div>
+          <strong>En esta página encontrarán apuntes de clases, talleres, videos y tablas que ayudan a mejorar el rendimiento académico en el área de matemáticas. En este sitio está publicado el material para los cursos impartidos en la Universidad de Caldas. Si deseas conocer la documentación para otros cursos de matemáticas o estadística, te recomiendo dirigirte a mi sitio web en <strong style="color: #0059ff;">wordpress</strong> dando clic <a style="color: #0059ff;" href="https://lelopezm.wordpress.com/" target="_blank">aquí</a>. </strong>
+        </p>        
       </div>
     </div>
     <!--Tablas-->
