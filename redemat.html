@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prof. Luis Eduardo López M.</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8faf9;
+      }
+      .header {
+        background-color: #0d6efd;
+        color: white;
+        padding: 20px;
+      }
+      .header h1 {
+        margin: 0;
+      }
+      .section-title {
+        border-bottom: 2px solid #0d6efd;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .content-list a {
+        text-decoration: none;
+        color: #0d6efd;
+      }
+      .footer {
+        background-color: #a0c0e0;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .footer a {
+        color: #ffc107;
+        text-decoration: none;
+      }
+
+      .fondo {
+        position: relative;
+    height: 60vh;
+    width: 100%;
+    background-image: url('img/ucaldas.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8; /* Ajusta el valor de opacidad según tus preferencias */
+    box-sizing: border-box;
+      }
+
+      .texto {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: black; /* O el color que prefieras para el texto */
+          text-align: center;
+          width: 90%;
+          z-index: 1;
+      }
+
+      @media (max-width: 576px) { /* Para dispositivos móviles */
+        .texto {
+          margin-top: 100px; /* Ajusta el valor del margen según tus necesidades */
+        }
+        .div {
+          margin-top: 200px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--MENÚ-->
+    <div id="nav-container"></div>
+
+    <!--Contenido-->
+    <div class="container">
+        <div class="container p-3">
+            <h1 style="text-align: center; color: cadetblue;">Caja de Polinomios</h1>
+            <h3 style="text-align: center; color: #79aadc;"><strong>REDEMAT:</strong> ¡Diviértete jugando con bloques y aprende álgebra sin estrés!</h3>
+        </div>
+
+        <div>
+            <p style="text-align: justify;"> REDEMAT es un proyecto cuyas siglas definen Refuerzo de Matemática y está enfocado para estudiantes de educación básica secundaria cuyo objetivo es el fortalecimiento de los conceptos matemáticos a través de juegos. En esta primera instancia iniciaremos con el refuerzo de las operaciones básicas con polinomios haciendo uso de una herramienta didáctica llamada <strong style="color: cadetblue;">Caja de Polinomios</strong> enfocada en la metodología de enseñanza: aprender jugando.
+            </p>
+        </div>
+        
+        <div>
+            <p style="text-align: justify;">Este proyecto esta vinculado a la Vicerrectoría de Proyección Institucional de la  <a href="https://www.ucaldas.edu.co/portal/" target="_blank">Universidad de Caldas</a> y esta coordinado por los siguientes profesores del Departamento de Matemáticas:</p>
+            <p>
+                <ul>
+                    <li><strong>PhD. Luis Eduardo López Montenegro</strong>, Docente Tiempo Completo. Coordinador principal.</li>
+                    <li><strong>PhD. Ana María Pulecio Montoya</strong>, Docente Medio Tiempo Ocasional. Coordinadora.</li>
+                    <li><strong>MSc. Yeidy Brand Uribe</strong>, Docente Tiempo Completo Ocasional. Coordinadora.</li>
+                    <li><strong>PhD. Kevin Esmeral</strong>, Docente Tiempo Completo. Coordinador.</li>
+                </ul>
+            </p>
+            <p style="text-align: justify;">y la colaboración de los siguientes estudiantes de pregrado:</p>
+            <p>
+                <ul>
+                    <li><strong>Nicolás Osorio</strong>, Programa de Licenciatura en Ciencias Naturales, Universidad de Caldas.</li>
+                    <li><strong>Johan Calderón</strong>, Programa de Licenciatura en Ciencias Naturales, Universidad de Caldas.</li>
+                    <li><strong>Milton Arias</strong>, Programa de Ingeniería de Sistemas y Computación, Universidad de Caldas.</li>
+                </ul>
+            </p>
+        </div>
+
+
+    </div>
+
+
+      <!-- Footer -->
+    <div id="footer-container"></div>
+    
+
+   <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+  </body>
+
+</html>
