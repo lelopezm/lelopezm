@@ -23,4 +23,4 @@ My work focuses on leveraging mathematical principles to solve real-world proble
 -   **Personal Website:** [lelopezm.github.io/lelopezm/](https://lelopezm.github.io/lelopezm/)
 -   **Email:** [eduardo.lopez@ucaldas.edu.co]
 -   **ResearchGate:** <a href="https://www.researchgate.net/profile/Luis-Lopez-Montenegro?ev=hdr_xprf" target="_blank"><img src="https://img.shields.io/badge/ResearchGate-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white" alt="ResearchGate"></a>
--   **WhatsApp:** <a href="https://wa.me/573025252872" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a> +57 302 5252872
+-   **WhatsApp:** <a href="https://wa.me/573025252872" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a>
