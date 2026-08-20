@@ -18,10 +18,23 @@
     <div class="container">
       <div>
         <h1 class="mt-2" style="color: red; text-align: center;">Álgebra Lineal</h1>
-        <!-- Contador de visitas -->
-        <center><a>
-          <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=23777"></a></center>
-          <!-- Fin Contador de visitas -->
+        
+        <!-- Coloca esto justo debajo de tu título principal rojo -->
+        <div id="visitas-algebra" style="font-family: Arial, sans-serif; font-size: 14px; color: #666; margin-top: 5px; margin-bottom: 15px;">
+          👁️ Alumnos que han revisado esta sección: <span id="count-algebra" style="font-weight: bold; color: #23c8a9;">...</span>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            // Usamos la key 'algebra' para independizar este conteo del home
+            fetch('https://counterapi.dev')
+              .then(res => res.json())
+              .then(data => {
+                document.getElementById('count-algebra').innerText = data.count.toLocaleString();
+              })
+              .catch(err => console.error('Error:', err));
+          });
+        </script>
       </div>
   
       <div>
