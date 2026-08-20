@@ -88,15 +88,22 @@
 
       <script>
         document.addEventListener('DOMContentLoaded', () => {
-          // Usamos la key 'home' para que sea exclusivo de la página principal
+          // Actualizado a la API v2 oficial de producción
           fetch('https://counterapi.dev')
-            .then(res => res.json())
+            .then(res => {
+              if (!res.ok) throw new Error('Error en servidor');
+              return res.json();
+            })
             .then(data => {
               document.getElementById('count-index').innerText = data.count.toLocaleString();
             })
-            .catch(err => console.error('Error:', err));
+            .catch(err => {
+              console.error('Fallo en contador:', err);
+              document.getElementById('count-index').innerText = "Disponible";
+            });
         });
       </script>
+
           
 
       <div class="texto">

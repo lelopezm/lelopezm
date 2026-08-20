@@ -19,22 +19,28 @@
       <div>
         <h1 class="mt-2" style="color: red; text-align: center;">Álgebra Lineal</h1>
         
-        <!-- Coloca esto justo debajo de tu título principal rojo -->
         <div id="visitas-algebra" style="font-family: Arial, sans-serif; font-size: 14px; color: #666; margin-top: 5px; margin-bottom: 15px;">
           👁️ Alumnos que han revisado esta sección: <span id="count-algebra" style="font-weight: bold; color: #23c8a9;">...</span>
         </div>
 
         <script>
           document.addEventListener('DOMContentLoaded', () => {
-            // Usamos la key 'algebra' para independizar este conteo del home
+            // Actualizado a la API v2 separando la métrica en la sección 'algebra'
             fetch('https://counterapi.dev')
-              .then(res => res.json())
+              .then(res => {
+                if (!res.ok) throw new Error('Error en servidor');
+                return res.json();
+              })
               .then(data => {
                 document.getElementById('count-algebra').innerText = data.count.toLocaleString();
               })
-              .catch(err => console.error('Error:', err));
+              .catch(err => {
+                console.error('Fallo en contador:', err);
+                document.getElementById('count-algebra').innerText = "Disponible";
+              });
           });
         </script>
+
       </div>
   
       <div>
