@@ -1,75 +1,152 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Ejemplo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        .footer {
-            background-color: #0d6efd; /* Color similar al de tu imagen */
-            padding: 20px;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            text-align: center; /* Centramos todo */
-        }
-        .footer .contact-info i {
-            margin-right: 10px;
-        }
-        .footer a {
-            color: #000;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .footer .social-icons i {
-            font-size: 24px; /* Aumentamos el tamaño de los íconos */
-            margin-right: 15px;
-            color: #000;
-        }
-        .footer .social-icons i:hover {
-            color: #007bff; /* Color hover */
-        }
-        .footer .social-icons {
-            margin-top: 15px; /* Espaciado entre contacto y redes */
-        }
-    </style>
-</head>
-<body>
-
-<!-- Footer -->
-<footer class="footer">
+<footer class="text-white pt-5 pb-4 mt-5 shadow-lg border-top border-3 border-warning" style="background-color: #0059ff;">
     <div class="container">
-        <h5>Contáctame</h5>
-        <div class="contact-info">
-            <p>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:eduardo.lopez@ucaldas.edu.co">eduardo.lopez@ucaldas.edu.co</a>
-            </p>
-        </div>
-        <div class="social-icons">
-            <a href="https://www.youtube.com/channel/UCmnSxYEgBzvmW0boLYzb9Aw" target="_blank">
-                <i class="fab fa-youtube"></i>
-
-            <a href="https://www.instagram.com/mate.math_university" target="_blank">
-                    <i class="fab fa-instagram"></i>
-            </a>
+        <div class="row gy-4 align-items-start">
             
-            <a href="https://wa.me/+573025252872" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>       
-            <a href="https://www.researchgate.net/profile/Luis-Lopez-Montenegro" target="_blank">
-                <i class="fab fa-researchgate"></i>
-            </a>
+            <!-- Columna 1: Información Académica y Redes Sociales -->
+            <div class="col-12 col-lg-4 text-center text-lg-start">
+                <h5 class="fw-bold text-white mb-2">Prof. Luis Eduardo López Montenegro</h5>
+                <p class="small text-white-50 mb-1">Departamento de Matemáticas — Universidad de Caldas</p>
+                <p class="small text-white-50 mb-3">Manizales, Caldas — Colombia</p>
+
+                <h6 class="fw-bold text-uppercase text-warning small mb-3">Redes & Contacto Directo</h6>
+                <div class="d-flex justify-content-center justify-content-lg-start flex-wrap gap-2">
+                    <!-- Email -->
+                    <a href="mailto:eduardo.lopez@ucaldas.edu.co" 
+                       class="btn btn-light rounded-circle d-flex align-items-center justify-content-center shadow-sm" 
+                       style="width: 48px; height: 48px; transition: transform 0.2s;" 
+                       title="Correo Institucional: eduardo.lopez@ucaldas.edu.co"
+                       aria-label="Correo Institucional" 
+                       onmouseover="this.style.transform='scale(1.1)'" 
+                       onmouseout="this.style.transform='scale(1)'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ea4335" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/>
+                        </svg>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/+573025252872" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-light rounded-circle d-flex align-items-center justify-content-center shadow-sm" 
+                       style="width: 48px; height: 48px; transition: transform 0.2s;" 
+                       title="WhatsApp Chat"
+                       aria-label="WhatsApp"
+                       onmouseover="this.style.transform='scale(1.1)'" 
+                       onmouseout="this.style.transform='scale(1)'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.012 2C6.48 2 2 6.48 2 12.012c0 1.97.57 3.81 1.56 5.37L2 22l4.76-1.53a9.98 9.98 0 005.252 1.542c5.53 0 10.012-4.48 10.012-10.012C22.024 6.48 17.542 2 12.012 2zm5.84 14.28c-.25.7-1.46 1.34-2.02 1.4-.52.06-1.18.09-3.38-.82-2.81-1.16-4.63-4.03-4.77-4.22-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.25-.28.56-.35.75-.35.19 0 .38 0 .54.01.17.01.41-.07.64.48.25.6.84 2.06.91 2.21.07.15.12.33.02.53-.1.19-.15.31-.3.49-.15.17-.31.39-.45.52-.14.15-.3.31-.13.6.17.29.77 1.27 1.65 2.05 1.13 1 2.09 1.31 2.39 1.46.3.15.48.12.65-.07.17-.19.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1.1.72 2.34 2.19 1.21.25.13.41.19.52.27.11.75-.25 1.45-1.02 1.65z"/>
+                        </svg>
+                    </a>
+                    <!-- ResearchGate -->
+                    <a href="https://www.researchgate.net/profile/Luis-Lopez-Montenegro" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-light rounded-circle d-flex align-items-center justify-content-center shadow-sm" 
+                       style="width: 48px; height: 48px; transition: transform 0.2s;" 
+                       title="Perfil en ResearchGate"
+                       aria-label="ResearchGate"
+                       onmouseover="this.style.transform='scale(1.1)'" 
+                       onmouseout="this.style.transform='scale(1)'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#00CCBB" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.54 0c1.356 0 2.46 1.104 2.46 2.462v19.076c0 1.358-1.104 2.462-2.46 2.462H4.46C3.104 24 2 22.896 2 21.538V2.462C2 1.104 3.104 0 4.46 0h15.08zM13.84 14.09h1.95v-4.88h-1.95v4.88zm-3.32-6.52c-1.85 0-3.1 1.25-3.1 3.1 0 1.84 1.25 3.09 3.1 3.09 1.05 0 1.83-.43 2.37-1.15v1.03h1.85V7.69h-1.85v.98c-.54-.72-1.32-1.1-2.37-1.1zm.26 1.61c.85 0 1.46.62 1.46 1.49 0 .86-.61 1.49-1.46 1.49-.86 0-1.47-.63-1.47-1.49 0-.87.61-1.49 1.47-1.49z"/>
+                        </svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/channel/UCmnSxYEgBzvmW0boLYzb9Aw" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-light rounded-circle d-flex align-items-center justify-content-center shadow-sm" 
+                       style="width: 48px; height: 48px; transition: transform 0.2s;" 
+                       title="Canal de YouTube"
+                       aria-label="YouTube"
+                       onmouseover="this.style.transform='scale(1.1)'" 
+                       onmouseout="this.style.transform='scale(1)'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/mate.math_university" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-light rounded-circle d-flex align-items-center justify-content-center shadow-sm" 
+                       style="width: 48px; height: 48px; transition: transform 0.2s;" 
+                       title="Cuenta de Instagram"
+                       aria-label="Instagram"
+                       onmouseover="this.style.transform='scale(1.1)'" 
+                       onmouseout="this.style.transform='scale(1)'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#E1306C" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Formulario de Comentarios y Solicitud de Asesorías -->
+            <div class="col-12 col-lg-5">
+                <div class="bg-white text-dark p-3 p-md-4 rounded-3 shadow border border-light">
+                    <h6 class="fw-bold text-primary mb-2 d-flex align-items-center gap-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#0059ff"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                        Formulario de Asesorías y Comentarios
+                    </h6>
+                    <p class="small text-secondary mb-3">
+                        Envía tus dudas o agenda una asesoría. Los mensajes llegarán a <strong>eduardo.lopez@ucaldas.edu.co</strong>:
+                    </p>
+
+                    <form action="https://formsubmit.co/eduardo.lopez@ucaldas.edu.co" method="POST">
+                        <input type="hidden" name="_subject" value="Nuevo Mensaje / Asesoría desde la Web Institucional">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="row g-2 mb-2">
+                            <div class="col-12 col-sm-6">
+                                <input type="text" name="Nombre" class="form-control form-control-sm" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" name="Correo" class="form-control form-control-sm" placeholder="Tu correo electrónico" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-2">
+                            <select name="Tipo_Mensaje" class="form-select form-select-sm" required>
+                                <option value="" selected disabled>Selecciona el motivo de tu mensaje...</option>
+                                <option value="Solicitud de Asesoría">Solicitud de Asesoría Académica</option>
+                                <option value="Consulta sobre Asignatura">Consulta sobre Asignatura</option>
+                                <option value="Sugerencia o Comentario">Sugerencia o Comentario</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-2">
+                            <textarea name="Mensaje" class="form-control form-control-sm" rows="2" placeholder="Escribe aquí tu duda, tema a consultar o disponibilidad horaria..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning btn-sm w-100 fw-bold text-dark shadow-sm py-2">
+                            Enviar Mensaje al Profesor
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Columna 3: Navegación Rápida y Derechos de Autor -->
+            <div class="col-12 col-lg-3 text-center text-lg-end d-flex flex-column justify-content-between">
+                <div>
+                    <h6 class="fw-bold text-uppercase text-warning small mb-3">Enlaces Rápidos</h6>
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-2 mb-3">
+                        <a href="index.html" class="btn btn-outline-light btn-sm rounded-pill px-3 fw-semibold">Inicio</a>
+                        <a href="algebra-lineal.html" class="btn btn-outline-light btn-sm rounded-pill px-3 fw-semibold">Álgebra Lineal</a>
+                        <a href="curriculum.html" class="btn btn-outline-light btn-sm rounded-pill px-3 fw-semibold">Currículum</a>
+                        <a href="tutores-ia.html" class="btn btn-success btn-sm rounded-pill px-3 fw-semibold">🤖 Tutores IA</a>
+                        <a href="preliminares.html" class="btn btn-outline-warning btn-sm rounded-pill px-3 fw-semibold">Conocimientos Previos</a>
+                    </div>
+                </div>
+
+                <div class="pt-3 border-top border-white-50 mt-2">
+                    <p class="small text-white-50 mb-0">
+                        &copy; <span id="year-footer">2026</span> Universidad de Caldas.
+                    </p>
+                    <p class="small text-white-50 mb-0">Todos los derechos reservados.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </footer>
-
-<!-- Optional JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-</body>
-</html>
