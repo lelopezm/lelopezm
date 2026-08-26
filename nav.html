@@ -1,42 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Luis Eduardo López-Montenegro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        .header-title {
-            background-color: #0059ff;
-            color: white;
-            padding: 20px 0;
-            text-align:right
-        }
-        .header-title h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .navbar-bg {
-            background-color: #007bff;
-        }
-    </style>
-</head>
-<body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark navbar-bg">
+<!-- Navbar Component (sin etiquetas <html> o <body> duplicadas) -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-bg" style="background-color: #007bff;">
     <div class="container-fluid">
-        <a class="navbar-brand">
-            <img src="img/logo.png" alt="Navbar Logo" style="width: 45%; height: auto;">
-          </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo Universidad de Caldas" style="max-width: 180px; height: auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Navegación de palanca">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mx-auto"> <!-- mx-auto centra el navbar horizontalmente -->
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                 </li>
@@ -46,32 +18,26 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="fundamentales.html">Matemáticas Fundamentales</a></li>
-                        <li><a class="dropdown-item" href="algebralineal.html">Álgebra Lineal</a></li>
-                        <li><a class="dropdown-item" href="calculo1.html">Cálculo I</a></li>
-                        <li><a class="dropdown-item" href="calculo2.html">Cálculo II</a></li>
+                        <li><a class="dropdown-item" href="algebra-lineal.html">Álgebra Lineal</a></li>
+                        <li><a class="dropdown-item" href="calculo-1.html">Cálculo I</a></li>
+                        <li><a class="dropdown-item" href="calculo-2.html">Cálculo II</a></li>
                         <li><a class="dropdown-item" href="especiales.html">Matemáticas Especiales</a></li>
-                        <li><a class="dropdown-item" href="Estadisticayprobabilidad.html">Estadística y Probabilidad</a></li>
+                        <li><a class="dropdown-item" href="estadistica-y-probabilidad.html">Estadística y Probabilidad</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="preliminares.html" style="color: red;">Conocimientos previos</a></li>
-                        <li><a class="dropdown-item" href="tutoresia.html" style="color: rgb(4, 99, 16);">Tutores IA</a></li>
+                        <li><a class="dropdown-item fw-bold text-danger" href="preliminares.html">Conocimientos previos</a></li>
+                        <li><a class="dropdown-item fw-bold text-success" href="tutores-ia.html">Tutores IA</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="curriculum.html">Currículum Vitae</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://lelopezm.wordpress.com/" target="_blank">WordPress</a>
+                    <a class="nav-link" href="https://lelopezm.wordpress.com/" target="_blank" rel="noopener noreferrer">WordPress</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="redemat.html" target="_blank">REDEMAT</a>
+                    <a class="nav-link" href="redemat.html" target="_blank" rel="noopener noreferrer">REDEMAT</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-
-<!-- Optional JavaScript -->
-<!-- Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
