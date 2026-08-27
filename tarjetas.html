@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Asignaturas y Recursos — Prof. Luis Eduardo López M.</title>
+    
+    <!-- Bootstrap CSS 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 Pro icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --brand-primary: #0059ff;
+        --brand-secondary: #003399;
+        --brand-accent: #ff9900;
+        --brand-success: #10b981;
+        --bg-canvas: #f8fafc;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --card-border: rgba(226, 232, 240, 0.8);
+      }
+
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: var(--bg-canvas);
+        color: var(--text-main);
+      }
+
+      /* Hero Section Header */
+      .cards-hero {
+        background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+        color: white;
+        padding: 50px 20px 40px;
+        border-radius: 0 0 24px 24px;
+        box-shadow: 0 10px 30px rgba(0, 89, 255, 0.15);
+      }
+
+      /* Custom Filter Pill Buttons */
+      .btn-filter {
+        border-radius: 50rem;
+        padding: 8px 22px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.25s ease;
+        border: 1px solid #cbd5e1;
+        background-color: white;
+        color: var(--text-muted);
+      }
+
+      .btn-filter:hover, .btn-filter.active {
+        background-color: var(--brand-primary);
+        color: white;
+        border-color: var(--brand-primary);
+        box-shadow: 0 4px 12px rgba(0, 89, 255, 0.25);
+      }
+
+      /* Modern Course Card Styling */
+      .custom-card {
+        background: #ffffff;
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+      }
+
+      .custom-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border-color: rgba(0, 89, 255, 0.3);
+      }
+
+      .card-header-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .custom-card:hover .card-header-icon {
+        transform: scale(1.1) rotate(-3deg);
+      }
+
+      /* Color Themes for Icon Containers */
+      .icon-blue { background-color: #eff6ff; color: #2563eb; }
+      .icon-amber { background-color: #fffbeb; color: #d97706; }
+      .icon-emerald { background-color: #ecfdf5; color: #059669; }
+      .icon-purple { background-color: #faf5ff; color: #9333ea; }
+      .icon-rose { background-color: #fff1f2; color: #e11d48; }
+
+      .badge-soft {
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 5px 12px;
+        border-radius: 50rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .badge-soft-primary { background: #dbeafe; color: #1e40af; }
+      .badge-soft-success { background: #d1fae5; color: #065f46; }
+      .badge-soft-warning { background: #fef3c7; color: #92400e; }
+      .badge-soft-danger { background: #ffe4e6; color: #9f1239; }
+
+      /* Resource Link Button Grid inside Cards */
+      .resource-btn {
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 8px 14px;
+        border-radius: 10px;
+        transition: background-color 0.2s ease;
+      }
+
+      /* Search Input Styling */
+      .search-box {
+        position: relative;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .search-box input {
+        border-radius: 50rem;
+        padding: 12px 20px 12px 45px;
+        border: 1px solid #cbd5e1;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+
+      .search-box i {
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="nav-container"></header>
+
+    <main>
+      <!-- Hero Header -->
+      <section class="cards-hero text-center">
+        <div class="container">
+          <span class="badge bg-warning text-dark mb-2 px-3 py-2 rounded-pill fw-bold text-uppercase">
+            <i class="fa-solid fa-graduation-cap me-1"></i> Portal de Aprendizaje
+          </span>
+          <h1 class="display-6 fw-extrabold mb-2">Asignaturas y Material de Apoyo</h1>
+          <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 700px;">
+            Accede a las unidades temáticas, apuntes PDF, talleres prácticos, tablas de consulta y tutores con Inteligencia Artificial.
+          </p>
+
+          <!-- Dynamic Search Input -->
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="cardSearch" class="form-control" placeholder="Buscar asignatura, tema o recurso...">
+          </div>
+        </div>
+      </section>
+
+      <section class="container my-4">
+        <div class="d-flex justify-content-center flex-wrap gap-2 mb-4" id="filterContainer">
+          <button class="btn btn-filter active" data-filter="all">
+            <i class="fa-solid fa-layer-group me-1"></i> Todos los Recursos
+          </button>
+          <button class="btn btn-filter" data-filter="asignatura">
+            <i class="fa-solid fa-book-bookmark me-1"></i> Asignaturas
+          </button>
+          <button class="btn btn-filter" data-filter="herramienta">
+            <i class="fa-solid fa-robot me-1"></i> IA & Herramientas
+          </button>
+          <button class="btn btn-filter" data-filter="tabla">
+            <i class="fa-solid fa-table me-1"></i> Tablas de Referencia
+          </button>
+        </div>
+
+        <div class="row g-4" id="cardsGrid">
+          
+          <!-- Card 1: Álgebra Lineal -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="asignatura">
+            <div class="custom-card p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-blue">
+                  <i class="fa-solid fa-vector-square"></i>
+                </div>
+                <span class="badge-soft badge-soft-primary">Pregrado</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Álgebra Lineal</h3>
+              <p class="small text-muted flex-grow-1">
+                Sistemas de ecuaciones lineales, matrices, determinantes, espacios vectoriales y valores/vectores propios.
+              </p>
+              
+              <div class="pt-3 border-top mt-2 d-flex flex-column gap-2">
+                <a href="algebra-lineal.html" class="btn btn-primary resource-btn w-100 d-flex align-items-center justify-content-between">
+                  <span>Ver Curso Completo</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="tutores-ia.html" class="btn btn-outline-success resource-btn w-100 d-flex align-items-center justify-content-center gap-1">
+                  <i class="fa-solid fa-robot"></i> Tutor IA Álgebra
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Matemáticas Fundamentales -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="asignatura">
+            <div class="custom-card p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-amber">
+                  <i class="fa-solid fa-square-root-variable"></i>
+                </div>
+                <span class="badge-soft badge-soft-warning">Base Académica</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Matemáticas Fundamentales</h3>
+              <p class="small text-muted flex-grow-1">
+                Operatoria algebraica, factorización, ecuaciones, funciones reales y trigonometría esencial.
+              </p>
+
+              <div class="pt-3 border-top mt-2 d-flex flex-column gap-2">
+                <a href="fundamentales.html" class="btn btn-primary resource-btn w-100 d-flex align-items-center justify-content-between">
+                  <span>Ver Curso Completo</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="preliminares.html" class="btn btn-outline-secondary resource-btn w-100 d-flex align-items-center justify-content-center gap-1">
+                  <i class="fa-solid fa-list-check"></i> Conceptos Previos
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Cálculo I -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="asignatura">
+            <div class="custom-card p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-rose">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span class="badge-soft badge-soft-primary">Pregrado</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Cálculo I</h3>
+              <p class="small text-muted flex-grow-1">
+                Límites, continuidad, concepto de derivada, reglas de derivación y aplicaciones a la optimización.
+              </p>
+
+              <div class="pt-3 border-top mt-2 d-flex flex-column gap-2">
+                <a href="calculo-1.html" class="btn btn-primary resource-btn w-100 d-flex align-items-center justify-content-between">
+                  <span>Ver Curso Completo</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://ucaldas2020-my.sharepoint.com/:b:/g/personal/eduardo_lopez_tools_ucaldas_edu_co/EUUWonAKoh9OuotbjzYhbfIB5jirjlQA00ErFqOULwUF2w?e=e4odeU" target="_blank" class="btn btn-outline-danger resource-btn w-100 d-flex align-items-center justify-content-center gap-1">
+                  <i class="fa-solid fa-file-pdf"></i> Tabla Derivadas
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Cálculo II -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="asignatura">
+            <div class="custom-card p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-purple">
+                  <i class="fa-solid fa-infinity"></i>
+                </div>
+                <span class="badge-soft badge-soft-primary">Pregrado</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Cálculo II</h3>
+              <p class="small text-muted flex-grow-1">
+                Integrales definidas e indefinidas, técnicas de integración, aplicaciones y sucesiones/series infinitas.
+              </p>
+
+              <div class="pt-3 border-top mt-2 d-flex flex-column gap-2">
+                <a href="calculo-2.html" class="btn btn-primary resource-btn w-100 d-flex align-items-center justify-content-between">
+                  <span>Ver Curso Completo</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://ucaldas2020-my.sharepoint.com/:b:/g/personal/eduardo_lopez_tools_ucaldas_edu_co/ESkfd4UyPgVNnPbti-jP88YBDKgcYmwRFTBzRf0R5b715A?e=5CjDRn" target="_blank" class="btn btn-outline-purple resource-btn w-100 d-flex align-items-center justify-content-center gap-1" style="border-color: #9333ea; color: #9333ea;">
+                  <i class="fa-solid fa-file-pdf"></i> Tabla Integrales
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Estadística y Probabilidad -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="asignatura">
+            <div class="custom-card p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-emerald">
+                  <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <span class="badge-soft badge-soft-success">Aplicado</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Estadística y Probabilidad</h3>
+              <p class="small text-muted flex-grow-1">
+                Análisis descriptivo de datos, distribuciones de probabilidad, estimación por intervalos y pruebas de hipótesis.
+              </p>
+
+              <div class="pt-3 border-top mt-2 d-flex flex-column gap-2">
+                <a href="estadistica-y-probabilidad.html" class="btn btn-primary resource-btn w-100 d-flex align-items-center justify-content-between">
+                  <span>Ver Curso Completo</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Tutores IA Interactivos -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="herramienta">
+            <div class="custom-card p-4" style="background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%); border-color: #86efac;">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-emerald">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <span class="badge-soft badge-soft-success">🤖 Inteligencia Artificial</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2 text-success">Tutores Virtuales IA</h3>
+              <p class="small text-muted flex-grow-1">
+                Asistentes de IA entrenados para orientar tus dudas paso a paso en Álgebra Lineal y Matemáticas.
+              </p>
+
+              <div class="pt-3 border-top mt-2 d-flex flex-column gap-2">
+                <a href="tutores-ia.html" class="btn btn-success resource-btn w-100 d-flex align-items-center justify-content-between shadow-sm">
+                  <span>Explorar Tutores IA</span>
+                  <i class="fa-solid fa-sparkles"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Tablas de Referencia Mathemática -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="tabla">
+            <div class="custom-card p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-amber">
+                  <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <span class="badge-soft badge-soft-warning">PDF Directos</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Fórmulas y Tablas</h3>
+              <p class="small text-muted flex-grow-1">
+                Colección completa de tablas en PDF: Derivadas, Integrales, Cónicas, Superficies Cuádricas y Límites.
+              </p>
+
+              <div class="pt-3 border-top mt-2">
+                <a href="index.html#tablas-referencia" class="btn btn-outline-warning text-dark fw-bold resource-btn w-100 d-flex align-items-center justify-content-center gap-1">
+                  <i class="fa-solid fa-folder-open"></i> Ver Colección de Tablas
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: Caja de Polinomios -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="herramienta">
+            <div class="custom-card p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-blue">
+                  <i class="fa-solid fa-cubes"></i>
+                </div>
+                <span class="badge-soft badge-soft-primary">Didáctico</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Caja de Polinomios</h3>
+              <p class="small text-muted flex-grow-1">
+                Herramienta interactiva para la representación visual y operaciones geométricas con polinomios.
+              </p>
+
+              <div class="pt-3 border-top mt-2">
+                <a href="caja-polinomios.html" class="btn btn-outline-primary resource-btn w-100 d-flex align-items-center justify-content-between">
+                  <span>Abrir Herramienta</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: Blog WordPress & REDEMAT -->
+          <div class="col-12 col-md-6 col-lg-4 card-item" data-category="herramienta">
+            <div class="custom-card p-4">
+              <div class="d-flex justify-content-between align-items-start">
+                <div class="card-header-icon icon-purple">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <span class="badge-soft badge-soft-primary">Externa</span>
+              </div>
+              <h3 class="h5 fw-bold mb-2">Blog y Redes de Investigación</h3>
+              <p class="small text-muted flex-grow-1">
+                Consulta publicaciones adicionales en WordPress y la plataforma de la Red Educativa de Matemáticas (REDEMAT).
+              </p>
+
+              <div class="pt-3 border-top mt-2 d-flex gap-2">
+                <a href="https://lelopezm.wordpress.com/" target="_blank" rel="noopener" class="btn btn-outline-secondary resource-btn w-50 text-center">
+                  WordPress
+                </a>
+                <a href="redemat.html" target="_blank" rel="noopener" class="btn btn-outline-primary resource-btn w-50 text-center">
+                  REDEMAT
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- End row grid -->
+
+        <!-- No Results Fallback Message -->
+        <div id="noResults" class="text-center py-5 d-none">
+          <i class="fa-solid fa-circle-exclamation text-muted display-4 mb-3"></i>
+          <h4 class="h5 fw-bold text-secondary">No se encontraron resultados</h4>
+          <p class="text-muted small">Intenta realizar la búsqueda con otro término o borra los filtros aplicados.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <!-- Bootstrap & Components JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/components.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('#filterContainer .btn-filter');
+        const cardItems = document.querySelectorAll('.card-item');
+        const searchInput = document.getElementById('cardSearch');
+        const noResults = document.getElementById('noResults');
+
+        let activeCategory = 'all';
+
+        // Filtering by category button
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategory = btn.getAttribute('data-filter');
+            applyFilters();
+          });
+        });
+
+        // Search input event
+        searchInput.addEventListener('input', applyFilters);
+
+        function applyFilters() {
+          const query = searchInput.value.toLowerCase().trim();
+          let visibleCount = 0;
+
+          cardItems.forEach(card => {
+            const category = card.getAttribute('data-category');
+            const cardText = card.textContent.toLowerCase();
+
+            const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+            const matchesSearch = (query === '' || cardText.includes(query));
+
+            if (matchesCategory && matchesSearch) {
+              card.style.display = 'block';
+              visibleCount++;
+            } else {
+              card.style.display = 'none';
+            }
+          });
+
+          if (visibleCount === 0) {
+            noResults.classList.remove('d-none');
+          } else {
+            noResults.classList.add('d-none');
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
